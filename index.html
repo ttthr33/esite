@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Threads</title>
+    <link rel="stylesheet" href="tooplate-bistro-elegance.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span>Threads</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#cart">Cart</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Threads</h1>
+            <p>
+                <span class="text-option">Premium Clothing for Every Style</span>
+                <span class="text-option">Upload Your Designs & Personalize</span>
+                <span class="text-option">Shop Shirts and hoodies</span>
+            </p>
+            <a href="#shop" class="cta-btn">Start Shopping</a>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop">
+        <h2>Shop Our Collection</h2>
+        <div class="menu-grid">
+            <!-- T-Shirt -->
+            <div class="product">
+                <img src="images/tshirt1.jpg" alt="T-Shirt">
+                <h3>Premade Hoodie Cherry</h3>
+                <p>Our favorite premade, the Cherry hoodie!</p>
+                <div class="price">$22.50</div>
+                <button onclick="addToCart('Premade Hoodie, Cherry Design', 22.50)">Add to Cart</button>
+            </div>
+
+            <!-- Hoodie -->
+            <div class="product">
+                <img src="images/hoodie1.jpg" alt="Hoodie">
+                <h3>Premade Hoodie Michigan</h3>
+                <p>Love Michigan? Then you will love this hoodie!</p>
+                <div class="price">$22.50</div>
+                <button onclick="addToCart('Premade Hoodie', 22.50)">Add to Cart</button>
+            </div>
+
+            <!-- Shorts -->
+            <div class="product">
+                <img src="images/shorts1.jpg" alt="Shorts">
+                <h3>Custom Shirt</h3>
+                <p>Comfortable shirt printed with your design</p>
+                <div class="price">$18</div>
+                <input type="file" accept="image/*" onchange="previewDesign(event)">
+                <button onclick="addToCart('Custom Shirt', 18)">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Design Preview -->
+        <div id="previewBox" style="text-align:center; margin-top:20px;">
+            <h3>Your Design Preview</h3>
+            <img id="previewImage" style="max-width:200px; display:none;">
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section id="cart">
+        <h2>Your Cart</h2>
+        <ul id="cartList"></ul>
+
+ <button id="myButton">Go to checkout </button>
+
+
+  <script>
+    document.getElementById("myButton").addEventListener("click", function() {
+      // Replace the URL below with your desired link
+      window.location.href = "https://example.com";
+    });
+  </script>
+
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: threadssupport@gmail.com<br></p>
+                <h3> Legal Disclaimer</h3>
+                <p>Printing copyrighted material on shirts without the permission of the copyright owner may constitute a felony under applicable law. Threads by Biscuit is not responsible for any legal consequences resulting from the unauthorized use of copyrighted content. You are solely responsible for ensuring that all designs you print comply with copyright and intellectual property laws.</p>
+                       </div>
+        </div>
+        <div style="margin-top:2rem; text-align:center; border-top:1px solid #555; padding-top:1rem;">
+            <p>&copy; 2026 Threads By Biscuit. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="tooplate-bistro-scripts.js"></script>
+</body>
+</html>
